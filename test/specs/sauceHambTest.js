@@ -64,7 +64,6 @@ describe('sauceDemo Basic Hamburger Test', () => {
     })
 
     it('[Stress]Opening and Closing Hamburger Menu', async () => {
-        //await hambTest.openClose();
         await hambTest.stressTestViewAllItems();
         await expect(sauceAssurance.rootAlert).toBeExisting()
         await expect(sauceAssurance.rootAlert).toHaveText(

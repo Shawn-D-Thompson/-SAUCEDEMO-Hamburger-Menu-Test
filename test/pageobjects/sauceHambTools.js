@@ -3,30 +3,27 @@ import myPages from './sauceDemoMain.js';
 
 class hambTest extends myPages {
 
+//Selectors
     get hambMenu () {
         return $('.bm-burger-button');
     }
-
     get hambX () {
         return $('.bm-cross-button');
     }
-
     get hambAllItems () {
         return $('#inventory_sidebar_link');
     }
-
     get hambAbout () {
         return $('#about_sidebar_link');
     }
-
     get hambLogout () {
         return $('#logout_sidebar_link');
     }
-
     get hambResetAS () {
         return $('#reset_sidebar_link');
     }
 
+//Clicking Selectors
     async openMenu () {
         await this.hambMenu.click();
     }
@@ -46,6 +43,7 @@ class hambTest extends myPages {
         await this.hambX.click()
     }
 
+//Creating a simple loop
     async openClose () {
         await this.hambMenu.click();
         await this.hambX.click();
@@ -64,6 +62,8 @@ class hambTest extends myPages {
         await this.hambMenu.click();
         await this.hambX.click();
     }
+
+//Creating a better loop
     async stressTestViewAllItems(times) {
         const viewAllItemsButton = await $('#react-burger-menu-btn'); // Select the menu button
         for (let i = 0; i < 10; i++) {
